@@ -34,91 +34,154 @@
         android:id="@+id/text_montagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Monte seu pedido:"
+        android:layout_marginTop="15dp"
+        android:text="Escolha os ingredientes:"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_nome" />
-
-    <CheckBox
-        android:id="@+id/check_cheese"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Queijo                                                     R$4,00"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.389"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_montagem" />
-
-    <CheckBox
-        android:id="@+id/check_lettuce"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Alface                                                     R$0,50"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check_cheese" />
-
-    <CheckBox
-        android:id="@+id/check_tomate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tomate                                                   R$1,00"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check_lettuce" />
-
-    <CheckBox
-        android:id="@+id/check_cream"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cream Cheese                                       R$4,50"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check_tomate" />
-
-    <CheckBox
-        android:id="@+id/check_manteiga"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Manteiga                                                R$1,50"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check_cream" />
-
-    <CheckBox
-        android:id="@+id/check_cebola"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cebola                                                    R$1,00"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check_manteiga" />
+        app:layout_constraintTop_toBottomOf="@+id/radioG_paes" />
 
     <Button
         android:id="@+id/button_pedido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="Calcular Valor Total"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check_cebola" />
+        app:layout_constraintTop_toBottomOf="@+id/scroll_adicionais" />
+
+    <TextView
+        android:id="@+id/text_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_pedido" />
+
+    <TextView
+        android:id="@+id/text_pao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Escolha seu pão (R$2,00):"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_nome" />
+
+    <RadioGroup
+        android:id="@+id/radioG_paes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_pao">
+
+        <RadioButton
+            android:id="@+id/radioB_frances"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:text="Pão Francês"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioB_leite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pão de Leite"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="267dp" />
+
+    </RadioGroup>
+
+    <ScrollView
+        android:id="@+id/scroll_adicionais"
+        android:layout_width="341dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="10dp"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_montagem">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/check_carne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hambúrguer                                             R$8,00"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/check_bacon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bacon                                                        R$5,00"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/check_queijo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Queijo                                                       R$4,00"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/check_cream"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cream Cheese                                         R$4,50"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/check_manteiga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manteiga                                                  R$1,50"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/check_alface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alface                                                       R$0,50"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/check_tomate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tomate                                                     R$1,00"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/check_cebola"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cebola                                                      R$1,00"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
