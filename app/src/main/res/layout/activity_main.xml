@@ -21,7 +21,7 @@
         android:id="@+id/text_nome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:fontFamily="casual"
         android:text="Montador de Sanduíche"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -129,57 +129,49 @@
                 android:id="@+id/check_carne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hambúrguer                                             R$8,00"
-                android:textStyle="bold" />
+                android:text="Hambúrguer                                             R$8,00" />
 
             <CheckBox
                 android:id="@+id/check_bacon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bacon                                                        R$5,00"
-                android:textStyle="bold" />
+                android:text="Bacon                                                        R$5,00" />
 
             <CheckBox
                 android:id="@+id/check_queijo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Queijo                                                       R$4,00"
-                android:textStyle="bold" />
+                android:text="Queijo                                                       R$4,00" />
 
             <CheckBox
                 android:id="@+id/check_cream"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cream Cheese                                         R$4,50"
-                android:textStyle="bold" />
+                android:text="Cream Cheese                                         R$4,50" />
 
             <CheckBox
                 android:id="@+id/check_manteiga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Manteiga                                                  R$1,50"
-                android:textStyle="bold" />
+                android:text="Manteiga                                                  R$1,50" />
 
             <CheckBox
                 android:id="@+id/check_alface"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Alface                                                       R$0,50"
-                android:textStyle="bold" />
+                android:text="Alface                                                       R$0,50" />
 
             <CheckBox
                 android:id="@+id/check_tomate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tomate                                                     R$1,00"
-                android:textStyle="bold" />
+                android:text="Tomate                                                     R$1,00" />
 
             <CheckBox
                 android:id="@+id/check_cebola"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cebola                                                      R$1,00"
-                android:textStyle="bold" />
+                android:text="Cebola                                                      R$1,00" />
 
         </LinearLayout>
     </ScrollView>

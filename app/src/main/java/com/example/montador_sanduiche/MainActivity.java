@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button_pedido;
     private TextView text_valor;
     private RadioGroup radioG_paes;
+    private RadioButton radioB_pao;
 
 
     @Override
@@ -55,10 +56,7 @@ public class MainActivity extends AppCompatActivity {
         button_pedido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double valor_total = 2;
-
-                int checkedId = radioG_paes.getCheckedRadioButtonId();
-                RadioButton radioB_pao = findViewById(checkedId);
+                double valor_total = 0;
 
                 if(check_queijo.isChecked())
                     valor_total += 4;
@@ -84,9 +82,17 @@ public class MainActivity extends AppCompatActivity {
                 if(check_bacon.isChecked())
                     valor_total += 5;
 
-                String text_total = String.format("Total: R$%.2f", valor_total);
-                text_valor.setText(text_total);
-                Toast.makeText(MainActivity.this, radioB_pao.getText() + " escolhido! ", Toast.LENGTH_SHORT).show();
+                int checkedId = radioG_paes.getCheckedRadioButtonId();
+
+                if(checkedId != -1){
+                    valor_total += 2;
+                    radioB_pao = findViewById(checkedId);
+                    Toast.makeText(MainActivity.this, radioB_pao.getText() + " escolhido! ", Toast.LENGTH_SHORT).show();
+                    String text_total = String.format("Total: R$%.2f", valor_total);
+                    text_valor.setText(text_total);
+                }
+                else
+                    Toast.makeText(MainActivity.this, "Escolha uma pão!", Toast.LENGTH_SHORT).show();
             }
         });
 
